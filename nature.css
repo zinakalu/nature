@@ -1,0 +1,359 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.container{
+  width:100%;
+  height:900px;
+  /*background-color: rgb(234, 230, 230);
+  I'm trying to find the banner color*/
+}
+
+.nav{
+  width:100%;
+  height:90px;
+  background-color: rgb(229, 229, 218);
+}
+
+.logo{
+  font-size: 2em;
+  position:relative;
+  top:25px;
+  left:7px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-weight: bold;
+}
+
+#mainlist{
+  display:flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#mainlist a{
+  margin-right:10px;
+  position: relative;
+  top:-2px;
+  color: #4d4d4d;
+  letter-spacing: 2px;
+  font-size:16px;
+  font-weight:500;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
+
+#sublist{
+  width:200px;
+  height:200px;
+  background-color: rgb(128, 191, 128);
+  list-style:none;
+  position:absolute;
+  display:none;
+  z-index:3;
+}
+
+#sublist li{
+  margin:20px;
+  position: relative;
+  top:15px;
+
+}
+
+#mainlist li:nth-child(1):hover #sublist {
+  display:block;
+}
+  
+
+
+.banner {
+  width:100%;
+  height:400px;
+  display:flex;
+  justify-content: center;
+}
+
+.banner .page-hero{
+  width:60%;
+  height:400px;
+}
+
+.page-hero img{
+  width:100%;
+  height:100%;
+}
+
+.form{
+  width:40%;
+  height:400px;
+  background-color: rgb(247, 249, 250);
+  display: flex;
+  justify-content: center;
+}
+.form input{
+  animation: slideinfrombottom 1s ease-in-out;
+}
+
+
+.fname{
+  display:block;
+  width:200px;
+  height:20px;
+  margin-bottom: 15px;
+}
+
+.lname{
+    display:block;
+    width:200px;
+    height:20px;
+    margin-bottom: 15px;
+}
+
+.email{
+  display:block;
+    width:200px;
+    height:20px;
+  
+}
+
+button{
+  padding: 15px;
+  border-radius: 25px;
+  position: relative;
+  top:40px;
+  left:45px;
+  background-color: rgb(242, 244, 246);
+  font-weight:bold;
+  letter-spacing: 1px;
+}
+
+button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.caption1{
+  width:100%;
+  height:150px;
+  background-color: rgb(227, 227, 224);
+}
+.caption1 h2{
+  margin-top: 3px;
+  font-family: 'Solway', serif;
+  text-align: center;
+}
+.caption1 p{
+  margin-top:15px;
+}
+
+
+.grid1{
+  width: 100%;
+  height:500px;
+  background-color: whitesmoke;
+  display:grid;
+  grid-template: 200px 80px 200px / repeat(3, 330px);
+  grid-template-areas: 
+  "content1 content2 content3"
+  "caption2 caption2 caption2"
+  "content4 content5 content6";
+  gap:11px;
+  
+}
+
+.content1{
+  grid-area:content1;
+  filter:contrast(120%) brightness(1.1);
+
+}
+
+.content2{
+  grid-area:content2;
+  filter:contrast(150%) brightness(1);
+}
+
+.content3{
+  grid-area:content3;
+  filter:contrast(125%) brightness(1.1);
+}
+
+.content1, .content2, .content3{
+  position: relative;
+  left:17px;
+  top:2px;
+}
+
+.grid1 img {
+  width:100%;
+  height:100%;
+}
+
+.caption2{
+  grid-area: caption2;
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+  top:10px;
+  color: #4d4d4d;
+  font-family: 'Playfair Display', serif;
+}
+
+.content4{
+  grid-area: content4;
+  position: relative;
+}
+
+.content5{
+  grid-area:content5;
+  position: relative;
+}
+
+.content6{
+  grid-area:content6;
+  position: relative;
+}
+
+h4{
+  position: absolute;
+  top:0;
+  color:white;
+
+}
+
+.content4, .content5, .content6{
+  position: relative;
+  left:17px;
+  bottom:2px;
+}
+
+.footer{
+    width:100%;
+    height:110px;
+    background-color: rgb(195, 192, 192);
+}
+
+.footer h3{
+  text-align: center;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 25px;
+  font-weight: bold;
+}
+.footer p{
+  text-align: center;
+}
+
+
+@keyframes slideinfrombottom{
+  0%{
+    transform:translateY(100%);
+  }
+  100%{
+    transform:translateX(0);
+  }
+}
+
+@media(max-width:500px){
+.container{
+  width:500px;
+  height:900px;
+
+}
+
+.logo{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#mainlist{
+  position:relative;
+  top:25px;
+  right: 75px;
+}
+
+.banner{
+  width:500px;
+  display:flex;
+  flex-direction: column-reverse;
+}
+.form{
+  width:500px;
+ 
+}
+.page-hero img{
+  width:500px;
+  height:250px;
+}
+button{
+  padding: 8px;
+  position: relative;
+  top: 5px;
+  /*right: -35px;*/
+
+}
+.caption h2{
+  font-size:1em;
+}
+.caption1 p{
+  font-size: 14px;
+}
+
+.grid1{
+  width:500px;
+  height:300px;
+  grid-template-columns: 470px;
+  grid-template-rows: repeat(7, 230px);
+  grid-template-areas: 
+  "content1"
+  "content2"
+  "content3"
+  "caption2"
+  "content4"
+  "content5"
+  "content6"
+}
+.content1{
+  grid-area:content1;
+}
+.content2{
+  grid-area:content2;
+}
+.content3{
+  grid-area:content3;
+}
+.caption2{
+  grid-area:caption2;
+  position: relative;
+  top:45px;
+}
+.content4{
+  grid-area:content4;
+}
+.content5{
+  grid-area: content5;
+}
+.content6{
+  grid-area:content6;
+}
+img{
+  width:100%;
+  height:100%;
+}
+
+.footer{
+  width:500px;
+  height:100px;
+  position: relative;
+  top:1300px;
+}
+.footer p{
+text-align: center;
+font-size:13px;
+
+}
+
+.footer #lasttext{
+  position: relative;
+  left: -130px;
+}
+}
